@@ -40,3 +40,25 @@ bun dev
 ```sh
 bun run build
 ```
+
+## Deployment to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Push your code** to the `main` or `master` branch:
+   ```sh
+   git push origin main
+   ```
+
+3. **The workflow will automatically**:
+   - Build your Vue app
+   - Deploy it to GitHub Pages
+   - Your site will be available at `https://<username>.github.io/<repository-name>/`
+
+The deployment workflow (`.github/workflows/deploy.yml`) will run automatically on every push to the main branch. You can also trigger it manually from the Actions tab.
